@@ -5,7 +5,7 @@ app.set('view engine', 'jade');
 app.use('/assets', express.static('assets'));
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Particle Remote', message: 'Hello there!'});
+  res.render('index', { title: 'Particle Remote', message: 'Particle Remote'});
 });
 
 var server = app.listen(3000, function () {

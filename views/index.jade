@@ -1,18 +1,28 @@
 html
   head
     title!= title
+    link(href='assets/stylesheets/bootstrap.min.css', rel='stylesheet')
     link(href='assets/stylesheets/font-awesome.min.css', rel='stylesheet')
+    link(href='assets/stylesheets/styles.css', rel='stylesheet')
   body
-    h1!= message
-    button.btn
-      i.fa.fa-arrow-circle-left
-    button
-      i.fa.fa-arrow-circle-right
-    button
-      i.fa.fa-arrow-circle-up
-    button
-      i.fa.fa-arrow-circle-down
-    button
-      i.fa.fa-stop
+    .navbar.navbar-default
 
+      a.navbar-brand
+        i.fa.fa-gamepad
+
+        != message
+    .dpad
+      button.btn.left&attributes({'data-dir': 'left'})
+        i.fa.fa-arrow-circle-left
+      button.btn.right&attributes({'data-dir': 'right'})
+        i.fa.fa-arrow-circle-right
+      button.btn.up&attributes({'data-dir': 'up'})
+        i.fa.fa-arrow-circle-up
+      button.btn.down&attributes({'data-dir': 'down'})
+        i.fa.fa-arrow-circle-down
+      .other-controls
+        button.btn.stop&attributes({'data-dir': 'stop'})
+          i.fa.fa-stop
+
+    script(src="https://code.jquery.com/jquery-2.1.4.min.js")
     script(src="assets/javascripts/controller.js")
