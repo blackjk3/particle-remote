@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'jade');
+app.use('/assets', express.static('assets'));
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.render('index', { title: 'Particle Remote', message: 'Hello there!'});
 });
 
 var server = app.listen(3000, function () {

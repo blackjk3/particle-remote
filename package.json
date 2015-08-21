@@ -3,7 +3,8 @@
   "dependencies": {
     "johnny-five": "",
     "spark-io": "",
-    "express": ""
+    "express": "",
+    "jade": ""
   },
   "repository": {
     "type": "git",
