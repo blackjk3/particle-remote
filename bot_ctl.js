@@ -31,63 +31,61 @@ board.on("ready", function() {
     process.stdin.resume();
     process.stdin.setEncoding('utf8');
     process.stdin.setRawMode(true);
-
-
 });
 
 
 function processDirection(cmd){
 
-    console.log('rcv cmd ' + cmd);
+    console.log('Process Command :: ' + cmd);
 
-        if (!cmd) return;
+    if (!cmd) return;
 
-        if (cmd == 'q') {
-            console.log('Quitting');
-            process.exit();
+    if (cmd == 'q') {
+        console.log('Quitting');
+        process.exit();
 
-        } else if (cmd == 'up') {
+    } else if (cmd == 'up') {
 
-            console.log('Forward');
-		r_speed += 1;
-		l_speed += 1;
-            left_wheel.ccw(l_speed/10);
-            right_wheel.cw(r_speed/10);
+        console.log('Forward');
+	r_speed += 1;
+	l_speed += 1;
+        left_wheel.ccw(l_speed/10);
+        right_wheel.cw(r_speed/10);
 
-        } else if (cmd == 'down') {
+    } else if (cmd == 'down') {
 
-            console.log('Backward');
-		r_speed -= 1;
-		l_speed -= 1;
-            left_wheel.ccw(l_speed/10);
-            right_wheel.cw(r_speed/10);
+        console.log('Backward');
+	r_speed -= 1;
+	l_speed -= 1;
+        left_wheel.ccw(l_speed/10);
+        right_wheel.cw(r_speed/10);
 
-        } else if (cmd == 'left') {
+    } else if (cmd == 'left') {
 
-            console.log('Left');
-		r_speed += 1;
-		//l_speed -= 1;
+        console.log('Left');
+    	r_speed += 1;
+    	//l_speed -= 1;
             //left_wheel.ccw(l_speed/10);
             right_wheel.cw(r_speed/10);
 
 
-        } else if (cmd == 'right') {
+    } else if (cmd == 'right') {
 
-		console.log('Right');
-		//r_speed -= 1;
-		l_speed += 1;
-		left_wheel.ccw(l_speed/10);
-		//right_wheel.cw(r_speed/10);
+    	console.log('Right');
+    	//r_speed -= 1;
+    	l_speed += 1;
+    	left_wheel.ccw(l_speed/10);
+    	//right_wheel.cw(r_speed/10);
 
-        } else if (cmd == 'space') {
+    } else if (cmd == 'stop') {
 
-		console.log('Stopping');
-		r_speed =0;
-		l_speed =0;
-		left_wheel.stop();
-		right_wheel.stop();
+    	console.log('Stopping');
+    	r_speed =0;
+    	l_speed =0;
+    	left_wheel.stop();
+    	right_wheel.stop();
 
-        }
+    }
 
 };
 module.exports=processDirection;

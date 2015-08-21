@@ -4,6 +4,7 @@
     "johnny-five": "",
     "spark-io": "",
     "express": "",
+    "socket.io": "",
     "jade": ""
   },
   "repository": {
