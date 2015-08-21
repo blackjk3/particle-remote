@@ -1,0 +1,17 @@
+{
+  "name": "particle-remote",
+  "dependencies": {
+    "johnny-five": "",
+    "spark-io": "",
+    "express": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blackjk3/particle-remote"
+  },
+  "author": "Jason Kadrmas, Travis Noll",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
+  }
+}
