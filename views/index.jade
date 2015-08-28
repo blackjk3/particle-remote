@@ -6,11 +6,14 @@ html
     link(href='assets/stylesheets/styles.css', rel='stylesheet')
   body
     .navbar.navbar-default
-
       a.navbar-brand
-        i.fa.fa-gamepad
+        img(src='assets/images/kidbot.png')
 
-        != message
+      ul.pull-right
+        li Setup
+        li &bull;
+        li Help 
+    
     .dpad
       button.btn.left&attributes({'data-dir': 'left'})
         i.fa.fa-arrow-circle-left

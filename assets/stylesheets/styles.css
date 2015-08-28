@@ -1,17 +1,41 @@
-.btn {
-  padding: 20px;
-  margin: 20px;
-  background: #eee;
+body {
+  background: #19252c;
+}
+
+.navbar-default {
+  background-color: #1e2c35;
   border: none;
-  border-radius: 10px;
+  border-bottom: 2px solid #2e3f48;
+}
+
+.navbar-default .navbar-brand {
+  color: #374a56;
+}
+
+.navbar-default li {
+  display: inline;
+  color: #fff;
+}
+
+.btn {
+  padding: 23px;
+  margin: 20px;
+  background: #d7e8ef;
+  border: none;
+  border-radius: 50%;
 }
 
 .btn i {
   font-size: 24px;
+  color: #4d636d;
 }
 
 .dpad {
+  background: #2b404d;
   position: relative;
+  max-width: 600px;
+  height: 320px;
+  border-radius: 20px;
 }
 
 .up {
@@ -45,4 +69,9 @@
 .fa-gamepad {
   font-size: 24px;
   margin-right: 10px;
+  color: #5dcb97;
+}
+
+.btn .fa-stop {
+  color: #f54c49;
 }
