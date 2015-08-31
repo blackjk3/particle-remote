@@ -5,6 +5,7 @@
     "spark-io": "",
     "express": "",
     "socket.io": "",
+    "spark": "",
     "jade": ""
   },
   "repository": {
